@@ -3142,7 +3142,7 @@ class PHPMailer
         // Base64 has a 4:3 ratio
         $avgLength = floor($length * $ratio * .75);
 
-        for ($i = 0; $i < $mb_length; $i += $offset) {
+        for ($i = 0, $offset = 0; $i < $mb_length; $i += $offset) {
             $lookBack = 0;
             do {
                 $offset = $avgLength - $lookBack;
